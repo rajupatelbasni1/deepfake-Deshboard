@@ -33,7 +33,7 @@ class DeepfakeModel(nn.Module):
 @st.cache_resource
 def load_model():
     model = DeepfakeModel()
-    model.load_state_dict(torch.load("/Users/rajupatel/deepfake_model.pth", map_location="cpu"))
+    model.load_state_dict(torch.load("deepfake_model.pth", map_location="cpu"))
     model.eval()
     return model
 
